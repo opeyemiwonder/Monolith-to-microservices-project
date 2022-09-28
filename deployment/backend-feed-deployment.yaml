@@ -14,38 +14,14 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: opetoyemi/udagram-api-feed:v3
+        image: docker.io/opetoyemi/udagram-api-feed:v3
         ports:
-        - containerPort: 8080
-        imagePullPolicy: Always
+        - containerPort: 80
         resources:
           limits:
-            memory: "1024Mi"
-            cpu: "500m"
+            cpu: 500m
           requests:
-            memory: "64Mi"
-            cpu: "200m"
-        env:
-        - name: POSTGRES_USERNAME
-          valueFrom: 
-            secretKeyRef: 
-              name: env-secret
-              key: postgres
-        - name: POSTGRES_PASSWORD
-          valueFrom: 
-            secretKeyRef: 
-              name: env-secret
-              key: Comforter1
-        - name: POSTGRES_HOST
-          valueFrom: 
-            secretKeyRef: 
-              name: env-configmap
-              key: database-1.cucgu00d8nwd.us-east-1.rds.amazonaws.com 
-        - name: POSTGRES_DB
-          valueFrom: 
-            secretKeyRef: 
-              name: env-configmap
-              key: postgres
+            cpu: 200m
 
 ---
 apiVersion: v1

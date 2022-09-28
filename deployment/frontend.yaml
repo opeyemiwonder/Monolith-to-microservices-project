@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: opetoyemi/udagram-frontend:v3
+        image: docker.io/opetoyemi/udagram-frontend:v3
         ports: 
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           limits:
             cpu: 500m
@@ -32,7 +32,7 @@ metadata:
     run: frontend
 spec:
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
   selector:
     run: frontend

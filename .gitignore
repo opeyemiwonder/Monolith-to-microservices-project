@@ -41,9 +41,5 @@ venv/
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 set_env.sh
-developmentset_env.sh
-set_env.sh
-set_env.sh
-deployment
-set_env.sh
-set_env.sh
+deployment/
+docker-compose.yaml

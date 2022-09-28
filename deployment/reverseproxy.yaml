@@ -14,14 +14,14 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: opetoyemi/udagram-reverseproxy:v3
-        ports: 
-        - containerPort: 8080
+        image: docker.io/opetoyemi/reverseproxy:v3
+        ports:
+        - containerPort: 80
         resources:
           limits:
-            cpu: 1000m
-          requests:
             cpu: 500m
+          requests:
+            cpu: 200m
 
 ---
 apiVersion: v1
