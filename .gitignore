@@ -43,4 +43,4 @@ venv/
 set_env.sh
 deployment/
 docker-compose.yml
-screenshots/
+/screenshots/
