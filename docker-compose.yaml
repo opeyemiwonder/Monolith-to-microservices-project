@@ -11,13 +11,13 @@ services:
   backend-user:
     image: udagram-api-user
     environment:
-      POSTGRES_USERNAME: postgres
-      POSTGRES_PASSWORD: Comforter
+      POSTGRES_USERNAME: xxxxx
+      POSTGRES_PASSWORD: xxxxx
       POSTGRES_DB: postgres
-      POSTGRES_HOST: database-2.cucgu00d8nwd.us-east-1.rds.amazonaws.com
+      POSTGRES_HOST: xxxxx.us-east-1.rds.amazonaws.com
       AWS_REGION: us-east-1 
       AWS_PROFILE: default 
-      AWS_BUCKET: microserve-s3-bucket
+      AWS_BUCKET: xxxxx
       JWT_SECRET: testing
       URL: "http://localhost:8100"
   backend-feed:
@@ -25,13 +25,13 @@ services:
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
-      POSTGRES_USERNAME: postgres
-      POSTGRES_PASSWORD: Comforter 
+      POSTGRES_USERNAME: xxxxx
+      POSTGRES_PASSWORD: xxxxx 
       POSTGRES_DB: postgres
-      POSTGRES_HOST: database-2.cucgu00d8nwd.us-east-1.rds.amazonaws.com
+      POSTGRES_HOST: xxxxx.us-east-1.rds.amazonaws.com
       AWS_REGION: us-east-1
       AWS_PROFILE: default 
-      AWS_BUCKET: microserve-s3-bucket
+      AWS_BUCKET: xxxxx
       JWT_SECRET: testing
       URL: "http://localhost:8100"
   frontend:
