@@ -22,4 +22,10 @@ kubectl describe hpa
 * To verify that you have set up logging with a backend application
 ```bash
 kubectl logs {pod_name}
+
 ```
+
+<!-- Troubleshooting -->
+kubectl exec -it {pod_name} sh
+http://localhost:8080/api/v0/feed
+kubectl logs {pod_name}
