@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  AWS_PROFILE: default 
+  JWT_SECRET: testing
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: .xxxxxx.us-east-1.rds.amazonaws.com
+  AWS_BUCKET: xxxx
+  AWS_REGION: us-east-1
+  URL: http://aae69b58b9357499f9c9e0e5b37a5273-1608607245.us-east-1.elb.amazonaws.com:8100
+  # URL : http://localhost.com:8100

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-feed
+  labels:
+    app: backend-feed
+spec:
+  selector:
+    matchLabels:
+      app: backend-feed
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backend-feed
+    spec:
+      containers:
+        - name: backend-feed
+          image: docker.io/opetoyemi/udagram-api-feed:v3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
+          envFrom:
+            - configMapRef: 
+                name: env-configmap
+            - secretRef:
+                name: env-secret 
+          volumeMounts:
+            - mountPath: "/root/.aws/"
+              name: aws-env
+      volumes:
+        - name: aws-env
+          configMap:
+            name: aws-env
+         
+# \.aws\config path where aws credential is stored on windows: opeyemi@DESKTOP-329MLVS:/mnt/c/Users/Opeyemi Adeyemi/.aws
